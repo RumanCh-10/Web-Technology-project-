@@ -1,0 +1,71 @@
+/* Body & Fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f0f4f7, #d9e2ec);
+    padding: 30px;
+    animation: backgroundShift 15s infinite alternate;
+}
+
+/* Animate background gradient */
+@keyframes backgroundShift {
+    0% { background: linear-gradient(120deg, #83898d, #d9e2ec); }
+    50% { background: linear-gradient(120deg, #d9f0f7, #f7e6d9); }
+    100% { background: linear-gradient(120deg, #f0f4f7, #d9e2ec); }
+}
+
+/* Title */
+h1.title {
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+/* Date */
+.date {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Table styling */
+table.product-table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    animation: tableFade 1s ease-in;
+}
+
+@keyframes tableFade {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+th, td {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+}
+
+/* Highlight expensive products */
+.expensive {
+    background-color: #ffe6e6;
+    font-weight: bold;
+    color: #c0392b;
+}
+
+/* Total price */
+.total {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #1e8449;
+}

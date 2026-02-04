@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Price List</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Product arrays
+        let products = ["Laptop", "Mouse", "Keyboard", "Headphone", "Smartphone"];
+        let prices = [80000, 1500, 2500, 3000, 50000];
+
+        function displayProducts() {
+            let tableBody = document.getElementById("productTable");
+            let total = 0;
+
+            for (let i = 0; i < products.length; i++) {
+                let row = tableBody.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+
+                cell1.innerHTML = products[i];
+                cell2.innerHTML = "Rs. " + prices[i];
+
+                // Highlight expensive products > 5000
+                if (prices[i] > 5000) {
+                    row.className = "expensive";
+                }
+
+                total += prices[i];
+            }
+
+            // Display total price on page
+            document.getElementById("totalPrice").innerHTML =
+                "Total Price: Rs. " + total;
+
+            // Popup message
+            alert("Total Product Price: Rs. " + total);
+
+            // Display current date
+            document.getElementById("date").innerHTML =
+                new Date().toDateString();
+        }
+    </script>
+</head>
+
+<body onload="displayProducts()">
+
+    <h1 class="title">Product Price List</h1>
+
+    <p class="date">Date: <span id="date"></span></p>
+
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+    </table>
+
+    <p id="totalPrice" class="total"></p>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RUMAN CHAPAGAIN | Personal Webpage</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Flexbox for Hobbies & Skills */
+        .lists-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .list-box {
+            background: white;
+            width: 260px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .list-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .list-box ul,
+        .list-box ol {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        window.onload = function () {
+            alert("Welcome to Ruman Chapagain's Web Page!");
+            document.getElementById("datetime").innerHTML =
+                new Date().toLocaleString();
+        };
+    </script>
+</head>
+
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: darkblue;">Ruman Chapagain</h1>
+
+    <!-- Image -->
+    <img src="image.png" alt="Ruman Chapagain" class="profile-img">
+
+    <!-- Description -->
+    <p>
+        Hello! My name is <strong>Ruman Chapagain</strong>.
+        I am passionate about learning new technologies and developing skills in web development.
+    </p>
+
+    <!-- Hobbies & Skills -->
+    <div class="lists-container">
+
+        <div class="list-box">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Coding</li>
+                <li>Exploring new technologies</li>
+                <li>Reading tech blogs</li>
+            </ol>
+        </div>
+
+        <div class="list-box">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Basic JavaScript</li>
+                <li>Web Design</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Hyperlink -->
+    <p>
+        Favorite Website:
+        <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+    </p>
+
+    <!-- Education Table -->
+    <h2>Education</h2>
+    <table>
+        <tr>
+            <th>Education Level</th>
+            <th>Institution Name</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>SEE</td>
+            <td>Bhanudaya Secondary School</td>
+            <td>2078</td>
+        </tr>
+        <tr>
+            <td>+2</td>
+            <td>Bhanudaya Secondary School</td>
+            <td>2080</td>
+        </tr>
+    </table>
+
+    <!-- Date & Time -->
+    <p><strong>Current Date & Time:</strong> <span id="datetime"></span></p>
+
+</body>
+</html>
